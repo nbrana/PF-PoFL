@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment (uv)
+.venv/
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.log
+
+# Linter cache
+.ruff_cache/
+
+# Type checkers
+.mypy_cache/
+.pyright/
+
+# Distribution / packaging
+MANIFEST
+*.tar.gz
+*.whl
+
+# Dataset downloads
+.data/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Rust / Substrate
+substrate/chain/target/
+*.pdb
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / local env
+.env
+.env.*
+*.key
+docs/presentation/*.html
+docs/presentation/*.pdf
+docs/*
