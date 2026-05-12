@@ -1,0 +1,23 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pf-pofl-node:latest
+    container_name: pf-pofl-node
+    command:
+      - --dev
+      - --tmp
+      - --rpc-external
+      - --rpc-cors=all
+      - --rpc-methods=Unsafe
+      - --unsafe-force-node-key-generation
+    ports:
+      - "9944:9944"
+      - "9933:9933"
+      - "30333:30333"
+    healthcheck:
+      test: ["CMD-SHELL", "echo > /dev/tcp/127.0.0.1/9944 || exit 1"]
+      interval: 5s
+      timeout: 2s
+      retries: 30
